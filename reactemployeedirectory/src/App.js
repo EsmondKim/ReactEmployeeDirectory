@@ -1,9 +1,9 @@
 //import logo from './logo.svg';
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import About from "./components/About/About.js";
-import Discover from "./components/Discover/Discover.js";
-import Search from "./components/Search/Search.js";
+import About from "./pages/About.js";
+import Discover from "./pages/Discover.js";
+import Search from "./pages/Search.js";
 import NavTabs from "./components/NavBar/NavBar.js";
 
 function App() {

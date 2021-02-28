@@ -1,9 +1,9 @@
 import React from "react";
-import Container from "../Container";
-import Col from "../Col";
-import Row from "../Row";
-import Card from "../Card";
-import SearchForm from "../SearchForm";
+import Container from "../Container/Container";
+import Col from "../Col/Col";
+import Row from "../Row/Row";
+import Card from "../Card/Card";
+import SearchForm from "../SearchForm/SearchForm";
 import API from "../utils/API.js";
 
 class Search extends React.Component {

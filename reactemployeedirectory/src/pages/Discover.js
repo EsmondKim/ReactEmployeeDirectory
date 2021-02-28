@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import API from "../utils/API";
-import Card from "../components/Card";
-import Alert from "../components/Alert";
+import API from "../components/utils/API";
+import Card from "../components/Card/Card";
+import Alert from "../components/Alert/Alert.js";
 
 class Discover extends Component {
   state = {
@@ -44,7 +44,7 @@ class Discover extends Component {
       .then(res =>
         this.setState({
           image: res.data.message
-        })
+        }),
       )
       .catch(err => console.log(err));
   };
