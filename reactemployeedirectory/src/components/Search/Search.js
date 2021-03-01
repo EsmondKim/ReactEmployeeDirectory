@@ -12,7 +12,6 @@ class Search extends React.Component {
     search: "",
   };
 
-  // When this component mounts, search for the movie "The Matrix"
   componentDidMount() {}
 
   searchDogs = (query) => {

@@ -47,6 +47,7 @@
 
 // export default Navbar;
 
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
@@ -56,16 +57,16 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
-        Pupster
+        EfficienCorp
       </Link>
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link
               to="/"
-              activeClassName={
+              className={
                 window.location.pathname === "/" || window.location.pathname === "/about"
-                  ? "nav-link ClassName"
+                  ? "nav-link active"
                   : "nav-link"
               }
             >
@@ -75,7 +76,7 @@ function Navbar() {
           <li className="nav-item">
             <Link
               to="/discover"
-              activeClassName={window.location.pathname === "/discover" ? "nav-link active" : "nav-link"}
+              className={window.location.pathname === "/discover" ? "nav-link active" : "nav-link"}
             >
               Discover
             </Link>
@@ -83,7 +84,7 @@ function Navbar() {
           <li className="nav-item">
             <Link
               to="/search"
-              activeClassName={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
+              className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
             >
               Search
             </Link>
