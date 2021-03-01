@@ -3,16 +3,30 @@ import API from "../components/utils/API";
 import Card from "../components/Card/Card";
 import Alert from "../components/Alert/Alert.js";
 
-function getRandomUser(props) {
-  return (
-    
-    <div>
+const DiscoverPage = () => {
+  let [responseData, setResponseData] = React.useState('')
+
+  const fetchData = (event) => {
+    event.preventDefault()
+
+    API.getRandomUser()
+    .then((response) => {
+      setResponseData(response.data)
+      console.log(response)
+    })
+    .catch((error) => {
+      console.log(error)
+      })
+      };
+
+      return(
+        <div>
         <h1>Hello Discovery Page For Testing</h1>
       </div>
-  )
-}
+      )
+    };
 
-export default getRandomUser
+export default DiscoverPage
 
 // class Discover extends Component {
 //   state = {
