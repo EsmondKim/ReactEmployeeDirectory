@@ -5,6 +5,7 @@ import Alert from "../components/Alert/Alert.js";
 
 function getRandomUser(props) {
   return (
+    
     <div>
         <h1>Hello Discovery Page For Testing</h1>
       </div>
