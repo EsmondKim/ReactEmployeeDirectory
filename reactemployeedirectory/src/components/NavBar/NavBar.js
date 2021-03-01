@@ -75,10 +75,10 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/discover"
-              className={window.location.pathname === "/discover" ? "nav-link active" : "nav-link"}
+              to="/users"
+              className={window.location.pathname === "/users" ? "nav-link active" : "nav-link"}
             >
-              Discover
+              Users
             </Link>
           </li>
           <li className="nav-item">

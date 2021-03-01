@@ -3,7 +3,7 @@ import API from "../components/utils/API";
 import Card from "../components/Card/Card";
 import Alert from "../components/Alert/Alert.js";
 
-const DiscoverPage = () => {
+const UsersPage = () => {
   let [responseData, setResponseData] = React.useState('')
 
   const fetchData = (event) => {
@@ -21,7 +21,7 @@ const DiscoverPage = () => {
 
       return(
         <div>
-        <h1>Click Below To Select An EfficienCorp Employee At Random.  All EfficienCorp Employees Are Happy And Grateful.  Join Us.</h1>
+        <h1>Click Below To Select An EfficienCorp Employee User At Random.  All EfficienCorp Employees Are Happy And Grateful.  Join Us And Become An EfficienCorp User.</h1>
         <h2>{responseData.title}</h2>
         <button onClick={(e) => fetchData(e)} type='button'>Click For An Employee Record</button>
         {responseData.dates && responseData.dates.map(date => {
@@ -31,7 +31,7 @@ const DiscoverPage = () => {
       )
     };
 
-export default DiscoverPage
+export default UsersPage
 
 // class Discover extends Component {
 //   state = {
