@@ -21,8 +21,13 @@ const DiscoverPage = () => {
 
       return(
         <div>
-        <h1>Hello Discovery Page For Testing</h1>
-      </div>
+        <h1>Click Below To Select An EfficienCorp Employee At Random.  All EfficienCorp Employees Are Happy And Grateful.  Join Us.</h1>
+        <h2>{responseData.title}</h2>
+        <button onClick={(e) => fetchData(e)} type='button'>Click For An Employee Record</button>
+        {responseData.dates && responseData.dates.map(date => {
+            return <p>{date}</p>
+        })}
+    </div>
       )
     };
 
