@@ -1,31 +1,27 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import API from "../components/utils/API";
 import Card from "../components/Card/Card";
 import Alert from "../components/Alert/Alert.js";
 
 const UsersPage = () => {
-  let [responseData, setResponseData] = React.useState('')
-
-  const fetchData = (event) => {
+  let [responseData, setResponseData] = React.useState([])
+  const fetchData = ((event) => {
     event.preventDefault()
 
     API.getRandomUser()
-    .then((response) => {
-      setResponseData(response.data)
-      console.log(response)
-    })
-    .catch((error) => {
-      console.log(error)
-      })
-      };
-
-      return(
-        <div>
+    .then(response => response.json())
+    .then(json => setResponseData(json))
+    .then(console.log(responseData))    
+    .catch(error => console.log(error))
+  }, [responseData])
+    
+    return(
+      <div>
         <h1>Click Below To Select An EfficienCorp Employee User At Random.  All EfficienCorp Employees Are Happy And Grateful.  Join Us And Become An EfficienCorp User.</h1>
-        <h2>{responseData.title}</h2>
+        {/* <h2>{responseData.title}</h2> */}
         <button onClick={(e) => fetchData(e)} type='button'>Click For An Employee Record</button>
-        {responseData.dates && responseData.dates.map(date => {
-            return <p>{date}</p>
+        {responseData.map(responseData => {
+            return <pre>{JSON.stringify(responseData)}</pre>
         })}
     </div>
       )
