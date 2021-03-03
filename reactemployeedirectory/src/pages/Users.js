@@ -1,33 +1,47 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState, useEffect } from "react";
 import API from "../components/utils/API";
 import Card from "../components/Card/Card";
 import Alert from "../components/Alert/Alert.js";
 
 const UsersPage = () => {
-  let [responseData, setResponseData] = React.useState([])
-  const fetchData = ((event) => {
-    event.preventDefault()
+  let [responseData, setResponseData] = useState([]);
 
+  function getUserButtonClicked() {
     API.getRandomUser()
-    .then(response => response.json())
-    .then(json => setResponseData(json))
-    .then(console.log(responseData))    
-    .catch(error => console.log(error))
-  }, [responseData])
-    
-    return(
-      <div>
-        <h1>Click Below To Select An EfficienCorp Employee User At Random.  All EfficienCorp Employees Are Happy And Grateful.  Join Us And Become An EfficienCorp User.</h1>
-        {/* <h2>{responseData.title}</h2> */}
-        <button onClick={(e) => fetchData(e)} type='button'>Click For An Employee Record</button>
-        {responseData.map(responseData => {
-            return <pre>{JSON.stringify(responseData)}</pre>
-        })}
-    </div>
-      )
-    };
+      .then((json) => setResponseData(json))
+      .then(console.log(responseData))
+      .catch((error) => console.log(error));
+  }
 
-export default UsersPage
+  //  useEffect(() => {
+  //     API.getRandomUser()
+  //     .then(json => setResponseData(json))
+  //     .then(console.log(responseData))
+  //     .catch(error => console.log(error))
+  //   })
+
+  return (
+    <div>
+      <h1>
+        Click Below To Select An EfficienCorp Employee User At Random. All
+        EfficienCorp Employees Are Happy And Grateful. Join Us And Become An
+        EfficienCorp User.
+      </h1>
+      <button onClick={(e) => getUserButtonClicked(e)} type="button">
+        Click For An Employee Record
+      </button>
+      <h2>responseData</h2>
+      {/* {responseData.results.map((results) => {
+        return <pre>{JSON.stringify(results)}</pre>;
+      })} */}
+    </div>
+  );
+};
+
+//
+//
+
+export default UsersPage;
 
 // class Discover extends Component {
 //   state = {
