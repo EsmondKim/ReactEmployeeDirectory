@@ -19,12 +19,10 @@ function Search(props) {
   return (
     <div>
       <h1>
-        Click Below To Select An EfficienCorp Employee User At Random. All
-        EfficienCorp Employees Are Happy And Grateful. Join Us And Become An
-        EfficienCorp User.
+        Click Below To Return Some EfficienCorp Employees
       </h1>
       <button onClick={(e) => getUserButtonClicked(e)} type="button">
-        Click For An Employee Record
+        Click For Employee Records
       </button>
       <h2>responseData</h2>
       {responseData[0] === undefined ? (
