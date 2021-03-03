@@ -10,7 +10,9 @@ function App() {
   return (
     <Router>
       <NavTabs />
+      <Route exact path="/ReactEmployeeDirectory" component={About} />
       <Route exact path="/" component={About} />
+      <Route exact path="/about" component={About} />
       <Route exact path="/users" component={Users} />
       <Route exact path="/search" component={Search} />
     </Router>

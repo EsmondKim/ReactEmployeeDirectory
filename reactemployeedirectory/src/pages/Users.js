@@ -1,5 +1,6 @@
 import React, { Component, useState, useEffect } from "react";
 import API from "../components/utils/API";
+import SearchResults from "../components/SearchResults/SearchResults"
 import Card from "../components/Card/Card";
 import Alert from "../components/Alert/Alert.js";
 

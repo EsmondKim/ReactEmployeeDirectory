@@ -1,3 +1,7 @@
+import API from "../components/utils/API";
+import SearchForm from "../components/SearchForm/SearchForm"
+import SearchResults from "../components/SearchResults/SearchResults"
+
 function Search() {
   return (
     <h1>This is the search page.</h1>
