@@ -1,14 +1,50 @@
+import React, { useState } from "react";
 import API from "../components/utils/API";
-import SearchForm from "../components/SearchForm/SearchForm"
-import SearchResults from "../components/SearchResults/SearchResults"
+import SearchForm from "../components/SearchForm/SearchForm";
+import SearchResults from "../components/SearchResults/SearchResults";
 
-function Search() {
+function Search(props) {
+  const [responseData, setResponseData] = useState([]);
+
+  const [userInputVal, setInputVal] = useState();
+  const [empSrchResult, setEmpSrchResult] = useState(props.employees);
+
+  function getUserButtonClicked() {
+    API.getRandomUser()
+      .then((json) => setResponseData(json))
+      .then(console.log(responseData))
+      .catch((error) => console.log(error));
+  }
+  console.log("This is the res before return", responseData);
   return (
-    <h1>This is the search page.</h1>
-  )
+    <div>
+      <h1>
+        Click Below To Select An EfficienCorp Employee User At Random. All
+        EfficienCorp Employees Are Happy And Grateful. Join Us And Become An
+        EfficienCorp User.
+      </h1>
+      <button onClick={(e) => getUserButtonClicked(e)} type="button">
+        Click For An Employee Record
+      </button>
+      <h2>responseData</h2>
+      {responseData[0] === undefined ? (
+        <></>
+      ) : (
+        responseData.map((results) => {
+          //console.log("This is the results", results);
+          return (
+            <h1>
+              Hello World!
+              {/* {("Give me the JSON Stringify!!", JSON.stringify(results))} */}
+            </h1>
+          );
+        })
+      )}
+    </div>
+  );
 }
 
-export default Search
+export default Search;
 
 // import React, { Component } from "react";
 // import API from "../utils/API";
