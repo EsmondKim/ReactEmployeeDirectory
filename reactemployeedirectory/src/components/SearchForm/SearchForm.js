@@ -1,18 +1,4 @@
-import React, { useState } from "react";
-
 function SearchForm(props) {
-
-  const [userInputVal, setInputVal] = useState();
-  const [empSrchResult, setEmpSrchResult ] = useState(props.employees);
-  
-  const handleInputVal = (event) => {
-    setInputVal(event.target.value);
-    let searchedEmpArr = props.employees.filter(employee => employee.firstName);
-    console.log(props.employees);
-    console.log(searchedEmpArr);
-    setEmpSrchResult(searchedEmpArr)
-  }
-
   return (
     <form>
       <div className="form-group">

@@ -23,17 +23,38 @@ function Search() {
       });
   }
 
-  const handleInputChange = (event) => {
-    setSearch(event.target.value);
-  };
+  // const handleInputChange = (event) => {
+  //   setSearch(event.target.value);
+  //   let searchedEmpArr = search.filter(employee => employee.firstName)
+
+  // };
 
   return (
     <>
-      <SearchForm handleInputChange={handleInputChange} results={search} />
-      <ResColumns></ResColumns>
-      <SearchResults></SearchResults>
+      <div className="container">
+      <SearchForm></SearchForm>
+      <h1>EfficienCorp Employee Table</h1>
+      <table className="table table-striped">
+        <ResColumns />
+        <tbody>
+          {employee.map((employee) => (
+            <SearchResults
+              id={employee.id}
+              firstName={employee.firstName}
+              lastName={employee.lastName}
+              email={employee.email}
+              thumbnail={employee.picture}
+            />
+          ))}
+        </tbody>
+      </table>
+    </div>
     </>
   );
-}
+};
 
 export default Search;
+
+
+
+
