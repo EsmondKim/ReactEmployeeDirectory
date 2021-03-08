@@ -24,10 +24,10 @@ The USER should be able to:
 - Filter the users by at least one property.
 
 Sceenshots
-![Here is a screenshot of the About Page of the User Employee Directory.](/screenshots/screenshot1.jpg)
+![Here is a screenshot of the About Page of the User Employee Directory.](/screenshots/screenshot1.JPG)
 
-![Here is a screenshot of the Search Page of the User Employee Directory.](/screenshots/screenshot2.jpg)
-<br>
+![Here is a screenshot of the Search Page of the User Employee Directory.](/screenshots/screenshot2.JPG)
+
 [Here is a link to the deployed page.](https://esmondkim.github.io/ReactEmployeeDirectory/)<br>
 
 ## Installation
