@@ -13,7 +13,7 @@
 
 ## Description
 
-This app is an Employee User Directory created using React. The app allows you to summon a batch of employees, then the app allows you to filter and narrow the batch by employee first name. The code takes advantage of React states and useEffect to make this search dynamic. You can also sort the employees by their ID numbers or by their first names. The app also makes use of a Router to facilitate differnt pages, includes a NavBar component with links to routes, and features a persistent footer on the bottom of all pages.
+This app is an Employee User Directory created with React. The app allows users to summon a table of employees, then the app allows users to filter and narrow the table. The code takes advantage of React states and React useEffect to make searching dynamic. Users can also sort the employees by their ID numbers or by their first names. The app includes a Router to facilitate differnt pages, a NavBar component with links to routes, and persistent footers on pages.
 
 Here's a User Story for the App:
 WHEN the USER loads the page,
@@ -36,7 +36,7 @@ The app requires no installation if you're simply using the app on the GitHup pa
 
 ## Usage
 
-To use the application, open the webpage. Review the information on the About page. Then click over to the Search page. On the Search page, the user automatically receives a random table of employees. The User can narrow the table results by searching for employee first name. The user can also sort a table by employee ID or sort by employee first name. If the user wishes to get a new table of empoyees, their is a Refresh Table button for the user.
+To use the application, open the webpage. Review the information on the About page. Then click over to the Search page. On the Search page, the user automatically receives a random table of employees. The User can narrow the table results by searching for employee first name. The user can also sort a table by employee ID or sort by employee first name. If the user wishes to get a new table of empoyees, user must refresh the page.
 
 ## Contributing
 
