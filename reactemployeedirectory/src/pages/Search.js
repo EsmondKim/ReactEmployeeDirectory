@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import API from "../components/utils/API";
 import SearchForm from "../components/SearchForm/SearchForm";
 import SearchResults from "../components/SearchResults/SearchResults";
-import FooterSearch from "../components/FooterSearch/FooterSearch";
+import Footer from "../components/Footer/Footer";
 
 function Search() {
   const [empArray, setArray] = useState([]);
@@ -37,7 +37,6 @@ function Search() {
     <>
       <div className="container">
         <SearchForm employees={empArray} setTable={setArray} />
-       
 
         <h1>EfficienCorp Employee Table</h1>
         <button onClick={sortIds} className="btn btn-success">
@@ -48,16 +47,16 @@ function Search() {
           Sort First Names
         </button>
         <table className="table table-striped">
-        <thead>
-          <tr>
-            <th>Emp ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Profile Pic</th>
-          </tr>
-        </thead>
-        <tbody>
+          <thead>
+            <tr>
+              <th>Emp ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Profile Pic</th>
+            </tr>
+          </thead>
+          <tbody>
             {empArray.map((emp) => (
               <SearchResults
                 key={emp.id}
@@ -70,7 +69,7 @@ function Search() {
             ))}
           </tbody>
         </table>
-        <FooterSearch />
+        <Footer />
       </div>
     </>
   );
