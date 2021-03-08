@@ -24,7 +24,7 @@ The USER should be able to:
 
 Sceenshots
 ![Here is a screenshot of the About Page of the User Employee Directory.](/reactemployeedirectory/public/images/screenshot1.jpg)
-<br>
+
 ![Here is a screenshot of the Search Page of the User Employee Directory.](/reactemployeedirectory/public/images/screenshot2.jpg)
 <br>
 [Here is a link to the deployed page.](https://esmondkim.github.io/ReactEmployeeDirectory/)<br>
