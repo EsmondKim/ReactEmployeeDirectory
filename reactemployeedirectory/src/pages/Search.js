@@ -4,7 +4,6 @@ import SearchForm from "../components/SearchForm/SearchForm";
 import SearchResults from "../components/SearchResults/SearchResults";
 
 function Search() {
-  //const [employee, setEmployee] = useState([]);
   const [empArray, setArray] = useState([]);
 
   useEffect(() => {
@@ -14,10 +13,7 @@ function Search() {
   function loadEmployeeBatch() {
     API.getEmployees()
       .then((employeeBatch) => {
-        console.log("This is the API Get employee batch log", employeeBatch);
-        //setEmployee(employeeBatch);
         setArray(employeeBatch);
-        console.log("This is the empArray log.", empArray)
       })
       .catch((err) => {
         console.log(err);
@@ -40,15 +36,16 @@ function Search() {
     <>
       <div className="container">
         <SearchForm employees={empArray} setTable={setArray} />
+       
+
+        <h1>EfficienCorp Employee Table</h1>
         <button onClick={sortIds} className="btn btn-success">
-          SortId
+          Sort Id's
         </button>
 
         <button onClick={sortNames} className="btn btn-warning">
-          Order Names
+          Sort First Names
         </button>
-
-        <h1>EfficienCorp Employee Table</h1>
         <table className="table table-striped">
         <thead>
           <tr>
