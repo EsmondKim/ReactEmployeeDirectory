@@ -15,10 +15,9 @@ function Search() {
   function loadEmployeeBatch() {
     API.getEmployees()
       .then((employeeBatch) => {
-        console.log(employeeBatch);
+        console.log("This is the API Get employee batch log", employeeBatch);
         setEmployee(employeeBatch);
         setArray(employeeBatch);
-        console.log(empArray)
       })
       .catch((err) => {
         console.log(err);
@@ -53,17 +52,18 @@ function Search() {
         <table className="table table-striped">
           <ResColumns />
           <SearchResults>
-          <tbody>
+         
             {empArray.map((employee) => (
               <SearchResults
+                key={employee.id}
                 id={employee.id}
                 firstName={employee.firstName}
                 lastName={employee.lastName}
                 email={employee.email}
-                thumbnail={employee.picture}
+                picture={employee.picture}
               />
             ))}
-          </tbody>
+        
           </SearchResults>
         </table>
       </div>

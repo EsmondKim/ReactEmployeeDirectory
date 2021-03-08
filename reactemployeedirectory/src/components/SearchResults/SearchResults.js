@@ -2,7 +2,8 @@ import React from "react";
 import "./style.css";
 
 function SearchResults(props) {
-    return (
+  return (
+    <tbody>
       <tr>
         <td>{props.id}</td>
         <td>{props.firstName}</td>
@@ -12,6 +13,7 @@ function SearchResults(props) {
           <img src={props.thumbnail} alt="profile"></img>
         </td>
       </tr>
+    </tbody>
   );
 }
 
