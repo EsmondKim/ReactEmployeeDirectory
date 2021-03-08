@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import API from "../components/utils/API";
 import SearchForm from "../components/SearchForm/SearchForm";
 import SearchResults from "../components/SearchResults/SearchResults";
-import ResColumns from "../components/ResColumns/ResColumns";
 
 function Search() {
-  const [employee, setEmployee] = useState([]);
+  //const [employee, setEmployee] = useState([]);
   const [empArray, setArray] = useState([]);
 
   useEffect(() => {
@@ -16,8 +15,9 @@ function Search() {
     API.getEmployees()
       .then((employeeBatch) => {
         console.log("This is the API Get employee batch log", employeeBatch);
-        setEmployee(employeeBatch);
+        //setEmployee(employeeBatch);
         setArray(employeeBatch);
+        console.log("This is the empArray log.", empArray)
       })
       .catch((err) => {
         console.log(err);
@@ -39,7 +39,7 @@ function Search() {
   return (
     <>
       <div className="container">
-        <SearchForm employee={employee} setTable={setArray} />
+        <SearchForm employees={empArray} setTable={setArray} />
         <button onClick={sortIds} className="btn btn-success">
           SortId
         </button>
@@ -50,21 +50,29 @@ function Search() {
 
         <h1>EfficienCorp Employee Table</h1>
         <table className="table table-striped">
-          <ResColumns />
+        <thead>
+          <tr>
+            <th>Emp ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Profile Pic</th>
+          </tr>
+        </thead>
+        <tbody>
           <SearchResults>
-         
-            {empArray.map((employee) => (
+            {empArray.map((emp) => (
               <SearchResults
-                key={employee.id}
-                id={employee.id}
-                firstName={employee.firstName}
-                lastName={employee.lastName}
-                email={employee.email}
-                picture={employee.picture}
+                key={emp.id}
+                id={emp.id}
+                firstName={emp.firstName}
+                lastName={emp.lastName}
+                email={emp.email}
+                picture={emp.picture}
               />
             ))}
-        
           </SearchResults>
+          </tbody>
         </table>
       </div>
     </>
