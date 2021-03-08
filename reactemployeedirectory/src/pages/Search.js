@@ -60,7 +60,6 @@ function Search() {
           </tr>
         </thead>
         <tbody>
-          <SearchResults>
             {empArray.map((emp) => (
               <SearchResults
                 key={emp.id}
@@ -71,7 +70,6 @@ function Search() {
                 picture={emp.picture}
               />
             ))}
-          </SearchResults>
           </tbody>
         </table>
       </div>
