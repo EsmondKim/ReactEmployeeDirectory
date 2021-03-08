@@ -21,7 +21,7 @@ function SearchForm(props) {
         </button>
         <br />
         <br />
-        <h5>Then feel free to search for an employee by first name.</h5>
+        <h5>Then feel free to narrow the batch by searching employee first name.</h5>
         <label htmlFor="search">Search:</label>
         <input
           onChange={(e) => handleInputChange(e)}

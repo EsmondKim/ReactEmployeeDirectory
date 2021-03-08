@@ -9,7 +9,7 @@ function SearchResults(props) {
       <td>{props.lastName}</td>
       <td>{props.email}</td>
       <td>
-        <img src={props.thumbnail} alt="profile"></img>
+        <img src={props.picture} alt="profile"></img>
       </td>
     </tr>
   );

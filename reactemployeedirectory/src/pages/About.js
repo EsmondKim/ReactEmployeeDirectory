@@ -3,6 +3,7 @@ import Hero from "../components/Hero/Hero";
 import Container from "../components/Container/Container";
 import Row from "../components/Row/Row";
 import Col from "../components/Col/Col";
+import FooterAbout from "../components/FooterAbout/FooterAbout"
 import corporateheroimg from "../components/Images/corporateheroimg.jpg";
 
 function About() {
@@ -27,6 +28,7 @@ function About() {
           </Col>
         </Row>
       </Container>
+      <FooterAbout />
     </div>
   );
 }

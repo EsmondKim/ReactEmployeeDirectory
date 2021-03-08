@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import API from "../components/utils/API";
 import SearchForm from "../components/SearchForm/SearchForm";
 import SearchResults from "../components/SearchResults/SearchResults";
+import FooterSearch from "../components/FooterSearch/FooterSearch";
 
 function Search() {
   const [empArray, setArray] = useState([]);
@@ -69,6 +70,7 @@ function Search() {
             ))}
           </tbody>
         </table>
+        <FooterSearch />
       </div>
     </>
   );
