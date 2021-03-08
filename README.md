@@ -13,7 +13,7 @@
 
 ## Description
 
-This app is an Employee User Directory created with React. The app allows users to summon a table of employees, then the app allows users to filter and narrow the table. The code takes advantage of React states and React useEffect to make searching dynamic. Users can also sort the employees by their ID numbers or by their first names. The app includes a Router to facilitate differnt pages, a NavBar component with links to routes, and persistent footers on pages.
+This app is an Employee User Directory created with React. The app allows users to summon a table of employees, then the app allows users to filter and narrow the table. The code takes advantage of React states and React useEffect to make searching dynamic. Users can also sort the employees by their ID numbers or by their first names. The app includes a Router to facilitate different pages, a NavBar component with links to routes, and persistent footers on pages.
 
 Here's a User Story for the App:
 WHEN the USER loads the page,
