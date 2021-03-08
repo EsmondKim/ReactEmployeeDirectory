@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function SearchForm(props) {
+  console.log("Search Form Function")
   const [input, setInput] = useState();
 
   const handleInputChange = (e) => {
