@@ -22,9 +22,8 @@ function About() {
         </Row>
         <Row>
           <Col size="md-12">
-            <p>This is a User Directory of EfficienCorp employees.  You can use it to learn more about EfficienCorp's wonderful employees and find their contact information.</p>
-            <p>Click on the Users link to see a random selection of our fantastic EfficienCorp employees along with their contact info.</p>
-            <p>Click on Search if you want to see EfficienCorp employees with the option to search for a particular EfficienCorp user.</p>
+            <p>This is a User Directory of EfficienCorp employees.  You can use it to learn more about EfficienCorp's wonderful employees and to find their contact information.</p>
+            <p>Click on Search to see a table of EfficienCorp employees with the option to search by first name or to sort the table.</p>
           </Col>
         </Row>
       </Container>

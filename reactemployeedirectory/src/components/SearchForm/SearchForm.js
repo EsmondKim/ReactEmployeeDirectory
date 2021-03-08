@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function SearchForm(props) {
-  console.log("Search Form Function")
+  console.log("Search Form Function");
   const [input, setInput] = useState();
 
   const handleInputChange = (e) => {
@@ -16,13 +16,16 @@ function SearchForm(props) {
   return (
     <form>
       <div className="form-group">
-        <h4>Hit the refresh button below to get a new batch of EfficienCorp employees.</h4>
-        <button onClick={props.handleFormSubmit} className="btn btn-primary">
-          Refresh Table
-        </button>
         <br />
+        <h5 className="justify-content-center text-center">
+          Hit refresh in your browswer at any time to get a new table of
+          EfficienCorp employees to search or sort.
+        </h5>
         <br />
-        <h5>Then feel free to narrow the batch by searching employee first name.</h5>
+        <h6 className="justify-content-center text-center">
+          Feel free to narrow the table by searching for an employee's first
+          name.
+        </h6>
         <label htmlFor="search">Search:</label>
         <input
           onChange={(e) => handleInputChange(e)}
@@ -30,6 +33,10 @@ function SearchForm(props) {
           className="form-control"
           placeholder="Search For an EfficienCorp Employee BY FIRST NAME"
         />
+        <h7>
+          (After searching, a page refresh is required if you wish to receive a
+          new list of employees.)
+        </h7>
       </div>
     </form>
   );
