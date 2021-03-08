@@ -17,7 +17,7 @@ function SearchForm(props) {
       <div className="form-group">
         <h4>Hit the refresh button below to get a new batch of EfficienCorp employees.</h4>
         <button onClick={props.handleFormSubmit} className="btn btn-primary">
-          Refresh
+          Refresh Table
         </button>
         <br />
         <br />
