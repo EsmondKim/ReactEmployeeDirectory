@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import API from "../components/utils/API";
 import SearchForm from "../components/SearchForm/SearchForm";
 import SearchResults from "../components/SearchResults/SearchResults";
+import EmployeeBatch from "../components/EmployeeBatch/EmployeeBatch";
 import Footer from "../components/Footer/Footer";
 
 function Search() {
@@ -15,7 +16,6 @@ function Search() {
   function loadEmployeeBatch() {
     API.getEmployees()
       .then((employeeBatch) => {
-        //setArray(employeeBatch);
         setUnfltrd(employeeBatch);
       })
       .catch((err) => {
@@ -39,29 +39,16 @@ function Search() {
     <>
       <div className="container">
         <SearchForm employees={unfltrdArray} setArray={setArray} />
-        <table className="table table-striped">
-          <thead>
-            <tr>
-              <th>Emp ID</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email</th>
-              <th>Profile Pic</th>
-            </tr>
-          </thead>
-          <tbody>
-            {empArray.map((emp) => (
-              <SearchResults
-                key={emp.id}
-                id={emp.id}
-                firstName={emp.firstName}
-                lastName={emp.lastName}
-                email={emp.email}
-                picture={emp.picture}
-              />
-            ))}
-          </tbody>
-        </table>
+        {empArray.map((emp) => (
+          <SearchResults
+            key={emp.id}
+            id={emp.id}
+            firstName={emp.firstName}
+            lastName={emp.lastName}
+            email={emp.email}
+            picture={emp.picture}
+          />
+        ))}
         <h1>EfficienCorp Employee Table</h1>
         <button onClick={sortIds} className="btn btn-success">
           Sort Id's
@@ -81,7 +68,7 @@ function Search() {
           </thead>
           <tbody>
             {unfltrdArray.map((emp) => (
-              <SearchResults
+              <EmployeeBatch
                 key={emp.id}
                 id={emp.id}
                 firstName={emp.firstName}
