@@ -6,6 +6,7 @@ import Footer from "../components/Footer/Footer";
 
 function Search() {
   const [empArray, setArray] = useState([]);
+  const [unfltrdArray, setUnfltrd] = useState([]);
 
   useEffect(() => {
     loadEmployeeBatch();
@@ -14,7 +15,8 @@ function Search() {
   function loadEmployeeBatch() {
     API.getEmployees()
       .then((employeeBatch) => {
-        setArray(employeeBatch);
+        //setArray(employeeBatch);
+        setUnfltrd(employeeBatch);
       })
       .catch((err) => {
         console.log(err);
@@ -22,27 +24,48 @@ function Search() {
   }
 
   const sortNames = () => {
-    let empNames = [...empArray];
+    let empNames = [...unfltrdArray];
     empNames.sort((a, b) => (a.firstName > b.firstName ? 1 : -1));
-    setArray(empNames);
+    setUnfltrd(empNames);
   };
 
   const sortIds = () => {
-    let empIds = [...empArray];
+    let empIds = [...unfltrdArray];
     empIds.sort((a, b) => (a.id > b.id ? 1 : -1));
-    setArray(empIds);
+    setUnfltrd(empIds);
   };
 
   return (
     <>
       <div className="container">
-        <SearchForm employees={empArray} setTable={setArray} />
-
+        <SearchForm employees={unfltrdArray} setArray={setArray} />
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th>Emp ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Profile Pic</th>
+            </tr>
+          </thead>
+          <tbody>
+            {empArray.map((emp) => (
+              <SearchResults
+                key={emp.id}
+                id={emp.id}
+                firstName={emp.firstName}
+                lastName={emp.lastName}
+                email={emp.email}
+                picture={emp.picture}
+              />
+            ))}
+          </tbody>
+        </table>
         <h1>EfficienCorp Employee Table</h1>
         <button onClick={sortIds} className="btn btn-success">
           Sort Id's
         </button>
-
         <button onClick={sortNames} className="btn btn-warning">
           Sort First Names
         </button>
@@ -57,7 +80,7 @@ function Search() {
             </tr>
           </thead>
           <tbody>
-            {empArray.map((emp) => (
+            {unfltrdArray.map((emp) => (
               <SearchResults
                 key={emp.id}
                 id={emp.id}
