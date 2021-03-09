@@ -1,4 +1,4 @@
-# Progressive Web App Online/Offline Budget Tracker
+# React Employee User Directory
 
 ## Table of Contents:
 
