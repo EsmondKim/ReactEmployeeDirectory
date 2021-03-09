@@ -13,7 +13,7 @@ function SearchForm(props) {
       props.setArray(newArr);
       console.log(newArr);
       if (lC.trim() === "") {
-        props.setArray([s]);
+        props.setArray([]);
         console.log("Search bar is empty.");
         return;
       }
