@@ -1,28 +1,16 @@
 import React from "react";
+import "./style.css";
 
 function SearchResults(props) {
   return (
-    <div className="border border-info">
-      <thead>
-        <tr>
-          <th>Emp ID</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Profile Pic</th>
-        </tr>
-      </thead>
-      <table>
-        <tbody>
-          {props.id}
-          {props.id}
-          {props.firstName}
-          {props.lastName}
-          {props.email}
-          {props.picture}
-        </tbody>
-      </table>
-    </div>
+      <tr>
+        <td>{props.id}</td>
+        <td>{props.id}</td>
+        <td>{props.firstName}</td>
+        <td>{props.lastName}</td>
+        <td>{props.email}</td>
+        <td><img src={props.picture} alt="profile"></img></td>
+      </tr>
   );
 }
 

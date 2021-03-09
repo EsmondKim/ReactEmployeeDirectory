@@ -36,52 +36,63 @@ function Search() {
   };
 
   return (
-    <>
-      <div className="container">
-        <SearchForm employees={unfltrdArray} setArray={setArray} />
-        {empArray.map((emp) => (
-          <SearchResults
-            key={emp.id}
-            id={emp.id}
-            firstName={emp.firstName}
-            lastName={emp.lastName}
-            email={emp.email}
-            picture={emp.picture}
-          />
-        ))}
-        <h1>EfficienCorp Employee Table</h1>
-        <button onClick={sortIds} className="btn btn-success">
-          Sort Id's
-        </button>
-        <button onClick={sortNames} className="btn btn-warning">
-          Sort First Names
-        </button>
-        <table className="table table-striped">
-          <thead>
-            <tr>
-              <th>Emp ID</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email</th>
-              <th>Profile Pic</th>
-            </tr>
-          </thead>
-          <tbody>
-            {unfltrdArray.map((emp) => (
-              <EmployeeBatch
-                key={emp.id}
-                id={emp.id}
-                firstName={emp.firstName}
-                lastName={emp.lastName}
-                email={emp.email}
-                picture={emp.picture}
-              />
-            ))}
-          </tbody>
-        </table>
-        <Footer />
-      </div>
-    </>
+    <div className="container">
+      <SearchForm employees={unfltrdArray} setArray={setArray} />
+      <table className="table table-striped">
+        <thead>
+          <tr>
+            <th>Emp ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Profile Pic</th>
+          </tr>
+        </thead>
+        <tbody>
+          {empArray.map((emp) => (
+            <SearchResults
+              key={emp.id}
+              id={emp.id}
+              firstName={emp.firstName}
+              lastName={emp.lastName}
+              email={emp.email}
+              picture={emp.picture}
+            />
+          ))}
+        </tbody>
+      </table>
+      <h1>EfficienCorp Employee Table</h1>
+      <button onClick={sortIds} className="btn btn-success">
+        Sort Id's
+      </button>
+      <button onClick={sortNames} className="btn btn-warning">
+        Sort First Names
+      </button>
+      <table className="table table-striped">
+        <thead>
+          <tr>
+            <th>Emp ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Profile Pic</th>
+          </tr>
+        </thead>
+        <tbody>
+          {unfltrdArray.map((emp) => (
+            <EmployeeBatch
+              key={emp.id}
+              id={emp.id}
+              firstName={emp.firstName}
+              lastName={emp.lastName}
+              email={emp.email}
+              picture={emp.picture}
+            />
+          ))}
+        </tbody>
+      </table>
+      <Footer />
+    </div>
   );
 }
 

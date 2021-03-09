@@ -13,8 +13,9 @@ function SearchForm(props) {
       props.setArray(newArr);
     }
     if (e === "") {
-      let newArr = [];
-      props.setArray(newArr);
+      console.log("Search Bar Is Now Empty");
+      //   let newArr = [];
+      //   props.setArray(newArr);
     }
   };
 
@@ -29,7 +30,7 @@ function SearchForm(props) {
           </h5>
           <h5
             className="justify-content-center text-center"
-            style={{ color: "red" }}
+            style={{ color: "blue" }}
           >
             Feel free to narrow the table by searching for an employee's first
             name.
