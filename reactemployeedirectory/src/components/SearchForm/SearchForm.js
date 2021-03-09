@@ -11,11 +11,12 @@ function SearchForm(props) {
         (employee) => employee.firstName.toLowerCase().indexOf(lC) !== -1
       );
       props.setArray(newArr);
-    }
-    if (e === "") {
-      console.log("Search Bar Is Now Empty");
-      //   let newArr = [];
-      //   props.setArray(newArr);
+      console.log(newArr);
+      if (lC.trim() === "") {
+        props.setArray([]);
+        console.log("Search bar is empty.");
+        return;
+      }
     }
   };
 
