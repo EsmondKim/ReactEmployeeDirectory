@@ -62,10 +62,10 @@ function Search() {
         </tbody>
       </table>
       <h1>EfficienCorp Employee Table</h1>
-      <button onClick={sortIds} className="btn btn-success">
+      <button onClick={sortIds} className="btn btn-secondary">
         Sort Id's
       </button>
-      <button onClick={sortNames} className="btn btn-warning">
+      <button onClick={sortNames} className="btn btn-primary">
         Sort First Names
       </button>
       <table className="table table-striped">
