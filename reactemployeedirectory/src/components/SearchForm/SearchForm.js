@@ -33,14 +33,15 @@ function SearchForm(props) {
             className="justify-content-center text-center"
             style={{ color: "blue" }}
           >
-            Feel free to narrow the table by searching for an employee's name.
+            Feel free to narrow the table by searching for an employee's first
+            name.
           </h5>
           <label htmlFor="search">Search:</label>
           <input
             onChange={(e) => handleInputChange(e)}
             type="text"
             className="form-control"
-            placeholder="Search For an EfficienCorp Employee By Name"
+            placeholder="Search For an EfficienCorp Employee By First Name"
           />
           <h6>Filtered search results will appear below.</h6>
         </div>
