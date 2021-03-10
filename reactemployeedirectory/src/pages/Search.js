@@ -49,16 +49,20 @@ function Search() {
           </tr>
         </thead>
         <tbody>
-          {empArray.map((emp) => (
-            <SearchResults
-              key={emp.id}
-              id={emp.id}
-              firstName={emp.firstName}
-              lastName={emp.lastName}
-              email={emp.email}
-              picture={emp.picture}
-            />
-          ))}
+          {empArray.length === 0 ? (
+            <p>No search results.</p>
+          ) : (
+            empArray.map((emp) => (
+              <SearchResults
+                key={emp.id}
+                id={emp.id}
+                firstName={emp.firstName}
+                lastName={emp.lastName}
+                email={emp.email}
+                picture={emp.picture}
+              />
+            ))
+          )}
         </tbody>
       </table>
       <h1>EfficienCorp Employee Table</h1>
